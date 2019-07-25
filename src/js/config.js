@@ -23,9 +23,10 @@ const config = {
         'image',
         'table',
         'video',
-        'code',
+        'mode',
         'undo',
-        'redo'
+        'redo',
+        'developer',
     ],
 
     fontNames: [

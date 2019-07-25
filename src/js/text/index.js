@@ -71,13 +71,20 @@ Text.prototype = {
     html: function (val) {
         const editor = this.editor
         const $textElem = editor.$textElem
+        const modeStatus = editor.mode
         let html
         if (val == null) {
+            if(modeStatus === 'code'){
+                return $textElem[0].innerText
+            }
             html = $textElem.html()
             // 未选中任何内容的时候点击“加粗”或者“斜体”等按钮，就得需要一个空的占位符 &#8203 ，这里替换掉
             html = html.replace(/\u200b/gm, '')
             return html
         } else {
+            if(modeStatus === 'code'){
+                return $textElem[0].innerText = val
+            }
             $textElem.html(val)
 
             // 初始化选取，将光标定位到内容尾部

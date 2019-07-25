@@ -309,7 +309,13 @@ DomElement.prototype = {
 
         return $(elem.childNodes)
     },
-
+    prepend($children){
+        return this.forEach(elem => {
+            $children.forEach(child => {
+                elem.insertBefore(child, elem.children[0])
+            })
+        })
+    },
     // 增加子节点
     append: function($children) {
         return this.forEach(elem => {

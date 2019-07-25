@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import E from 'wangeditor'
+import E from '../../../../release/wangEditor'
 
 class App extends Component {
   constructor(props, context) {

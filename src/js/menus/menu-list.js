@@ -50,8 +50,8 @@ MenuConstructors.backColor = BackColor
 import Quote from './quote/index.js'
 MenuConstructors.quote = Quote
 
-import Code from './code/index.js'
-MenuConstructors.code = Code
+import Mode from './mode/index.js'
+MenuConstructors.mode = Mode
 
 import Emoticon from './emoticon/index.js'
 MenuConstructors.emoticon = Emoticon
@@ -64,6 +64,9 @@ MenuConstructors.video = Video
 
 import Image from './img/index.js'
 MenuConstructors.image = Image
+
+import Developer from './developer/index.js'
+MenuConstructors.developer = Developer
 
 // 吐出所有菜单集合
 export default MenuConstructors

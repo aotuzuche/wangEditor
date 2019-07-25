@@ -9,12 +9,11 @@ import Text from '../text/index.js'
 import Command from '../command/index.js'
 import selectionAPI from '../selection/index.js'
 import UploadImg from './upload/upload-img.js'
-import { arrForEach, objForEach } from '../util/util.js'
+import { objForEach } from '../util/util.js'
 import { getRandom } from '../util/util.js'
 
 // id，累加
 let editorId = 1
-
 // 构造函数
 function Editor(toolbarSelector, textSelector) {
     if (toolbarSelector == null) {
@@ -26,7 +25,7 @@ function Editor(toolbarSelector, textSelector) {
 
     this.toolbarSelector = toolbarSelector
     this.textSelector = textSelector
-
+    this.mode = 'view'
     // 自定义配置
     this.customConfig = {}
 }
@@ -130,7 +129,7 @@ Editor.prototype = {
 
         // 记录输入法的开始和结束
         let compositionEnd = true
-        $textContainerElem.on('compositionstart', () => {
+        $textContainerElem.on('compositionstart', (e) => {
             // 输入法开始输入
             compositionEnd = false
         })
