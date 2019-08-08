@@ -1,14 +1,9 @@
 {
-  "name": "at-wangeditor",
-  "title": "at-wangEditor",
+  "name": "atEditor",
+  "title": "atEditor",
   "version": "3.1.1",
-  "description": "wangEditor - 基于javascript和css开发的 web 富文本编辑器， 轻量、简洁、易用、开源免费",
-  "homepage": "http://wangeditor.github.io/",
-  "keywords": [
-    "wangEditor",
-    "web 富文本编辑器"
-  ],
-  "main": "release/wangEditor.js",
+  "description": "atEditor - 基于wangEditor",
+  "main": "release/atEditor.js",
   "scripts": {
     "release": "gulp",
     "fix": "eslint  src/js/** --fix",
